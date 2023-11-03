@@ -1,8 +1,6 @@
 import com.google.cloud.tools.jib.gradle.JibExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.internal.impldep.com.amazonaws.util.StringUtils
-import org.gradle.internal.impldep.com.amazonaws.util.StringUtils.lowerCase
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.provideDelegate
 
@@ -11,7 +9,7 @@ class JibConfigPlugin : Plugin<Project> {
         project.pluginManager.withPlugin("com.google.cloud.tools.jib") {
             project.extensions.configure<JibExtension> {
                 val imageName: String by lazy {
-                    project.rootProject.name + lowerCase(project.path.replace(":", "/"))
+                    project.rootProject.name + project.path.replace(":", "/").lowercase()
                 }
                 val imageVersion: String? by project
                 val mainClassName: String by project

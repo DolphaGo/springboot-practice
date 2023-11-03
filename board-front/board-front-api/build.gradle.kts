@@ -22,9 +22,7 @@ bootJar.manifest {
 
 var frontUiDir = "$rootDir/board-front/board-front-ui"
 
-ext {
-    set("mainClassName", "me.dolphago.BoardFrontApiApplicationKt")
-}
+ext.set("mainClassName", "me.dolphago.BoardFrontApiApplicationKt")
 
 dependencies {
     implementation(project(":board-support"))

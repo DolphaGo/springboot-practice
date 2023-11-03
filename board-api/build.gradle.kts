@@ -15,9 +15,7 @@ bootJar.manifest {
 
 jar.enabled = true
 
-ext {
-    set("mainClassName", "me.dolphago.BoardApiApplicationKt")
-}
+ext.set("mainClassName", "me.dolphago.BoardApiApplicationKt")
 
 apply<JibConfigPlugin>()
 
