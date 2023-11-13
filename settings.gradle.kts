@@ -2,6 +2,7 @@ rootProject.name = "springboot-practice"
 
 include("board-entity")
 include("board-api")
+include("board-batch")
 include("board-support")
 include("board-front:board-front-api")
 findProject(":board-front:board-front-api")?.name = "board-front-api"
