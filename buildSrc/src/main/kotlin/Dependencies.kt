@@ -16,12 +16,11 @@ object Dependencies {
 
     val JPA = listOf(
         "org.springframework.boot:spring-boot-starter-data-jpa",
-        "com.querydsl:querydsl-jpa:${Versions.querydslVersion}",
+        "com.querydsl:querydsl-jpa:${Versions.querydslVersion}:jakarta",
     )
 
     val JPA_KAPT = listOf(
-        "com.querydsl:querydsl-jpa:${Versions.querydslVersion}",
-        "com.querydsl:querydsl-apt:${Versions.querydslVersion}:jpa",
+        "com.querydsl:querydsl-apt:${Versions.querydslVersion}:jakarta",
         "jakarta.persistence:jakarta.persistence-api",
         "jakarta.annotation:jakarta.annotation-api"
     )
