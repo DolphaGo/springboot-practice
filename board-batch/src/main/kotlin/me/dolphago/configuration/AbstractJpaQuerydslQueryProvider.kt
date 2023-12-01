@@ -7,7 +7,7 @@ import jakarta.persistence.Query
 import org.springframework.batch.item.database.orm.AbstractJpaQueryProvider
 import org.springframework.data.jpa.repository.support.Querydsl
 
-abstract class AbstractJpaQueryDslQueryProvider<T> : AbstractJpaQueryProvider() {
+abstract class AbstractJpaQuerydslQueryProvider<T> : AbstractJpaQueryProvider() {
 
     protected abstract fun targetClass(): Class<T>
     protected abstract fun getQuery(querydsl: Querydsl): JPAQuery<T>
