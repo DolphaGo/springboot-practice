@@ -1,5 +1,6 @@
-# kotlin-multi-module-sample
-코프링 멀티모듈 뼈대 샘플
+# kotlin-multi-module-spring-practice
+
+Spring practice project
 
 - SpringBoot: 3.1.5
 - kotlinVersion: 1.7.22
@@ -13,6 +14,9 @@
     - Vue3 + TypeScript + Vite
 - board-api
   - SpringBoot + Kotlin
+- board-batch
+  - SpringBoot + Kotlin
+  - MySQL
 - board-entity
   - SpringBoot + Kotlin
   - MySQL
