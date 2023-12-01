@@ -9,13 +9,13 @@ import org.springframework.data.jpa.repository.support.Querydsl
 
 abstract class AbstractJpaQueryDslQueryProvider<T> : AbstractJpaQueryProvider() {
 
+    protected abstract fun targetClass(): Class<T>
+    protected abstract fun getQuery(querydsl: Querydsl): JPAQuery<T>
+
     override fun createQuery(): Query {
         val builder: PathBuilder<T> = PathBuilderFactory().create(targetClass())
         val querydsl = Querydsl(entityManager, builder)
 
         return getQuery(querydsl).createQuery().unwrap(Query::class.java)
     }
-
-    protected abstract fun targetClass(): Class<T>
-    protected abstract fun getQuery(querydsl: Querydsl): JPAQuery<T>
 }

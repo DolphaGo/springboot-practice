@@ -1,8 +1,8 @@
 spring:
   profiles:
     include: db
-
+  batch:
+    jdbc:
+      initialize-schema: always
   jpa:
-    generate-ddl: true
-    hibernate:
-      ddl-auto: create
+    show-sql: true
